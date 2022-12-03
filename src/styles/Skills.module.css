@@ -1,0 +1,25 @@
+.Skills{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 1.5em 1em;
+    padding: 8em 1em;
+}
+.Skills__h2{ color: var(--primary-color-text); border-bottom: .1em solid currentColor; padding: 0 .3em; }
+.Skills__technologies, .Skills__tools{ display: flex; flex-wrap: wrap; gap: 1em; justify-content: center; }
+
+.Skills__icon{
+    width: 3em;
+    height: 3em;
+    transition: transform linear .2s;
+}.Skills__icon:hover{ transform: scale(1.15) }
+.Skills__icon svg{ width: 100%; height: 100%; color: #FAEDBC }
+
+
+
+@media screen and (max-width:600px){
+    .Skills{ padding: 3em 1em; }
+    .Skills__h2{ font-size: 1.2em; }
+    .Skills__icon{ width: 2em; height: 2em; }
+}

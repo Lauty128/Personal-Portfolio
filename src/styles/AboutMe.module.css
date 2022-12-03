@@ -1,0 +1,145 @@
+.Container{ width: 100%; padding: 5em 0; padding-bottom: 0 }
+
+/*----------------------- SECTION 1 ---------------------*/
+.AboutMe{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3em;
+    margin-bottom: 5em;
+}
+
+.AboutMe__imgContainer{ width: 17em; height: 20em; background-color: #FAEDBC;}
+.AboutMe__img{ 
+    width: 100%;  
+    height: 100%; 
+    margin: -1em 0em 0 1em; 
+    box-shadow: -.2em .2em 7px rgba(0,0,0,0.4);
+}
+
+.AboutMe__textContainer{ max-width: 400px }
+.AboutMe__h3{ margin-bottom: .6em; color: #FAEDBC; font-size: 24px; }
+.AboutMe__p { margin: 0; color: #E0E0E0; font-size: 1.1em; }
+
+.AboutMe__button{
+    position: relative;
+    display: flex;
+    background-color: #E0E0E0;
+    width: fit-content;
+    margin-top: 2em;
+    padding: .5em;
+    overflow: hidden;
+    z-index: 8;
+}
+.AboutMe__effectButton{   
+    position: absolute;
+    right: -22px;
+    top: 0;
+    width: 3em;
+    height: 3em;
+    background-color: #FAEDBC;
+    transform-origin: right;
+    transform: skewX(40deg);
+    transition: transform linear .3s;
+}
+.AboutMe__button:hover .AboutMe__effectButton{ transform: scaleX(4); }
+.AboutMe__h4{ margin-right: .5em; z-index: 10 }
+.AboutMe__button svg{ margin: 0; z-index: 10 }
+
+/*--------------------------------- SECTION 2 -------------------------------*/
+.Section{
+    width: 100%;
+    padding: 5em 10%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: rgb(68, 68, 68);
+}
+
+/* ----------------------------- MORE INFO            */
+.MoreInfo{ width: 90%; padding-top: .5em; }
+.MoreInfo__title{ color: #FAEDBC; text-decoration: underline }
+.MoreInfo__text{ margin-bottom: 2em; color: var(--primary-color-text); font-size: 1.2em }
+.MoreInfo__button{
+    width: fit-content;
+    font-size: 1.2em;
+    background-color: #FAEDBC;
+    padding: .5em;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+}
+
+/*------------------------------- ASIDE            */
+.Aside{ padding-left: .5em; border-left: .1em solid var(--secundary-color-text) }
+.Aside__title{   color: #FAEDBC;  text-decoration: underline;  margin: .5em auto 1em auto }
+
+.Article{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1em;
+    padding: .5em;
+    border-bottom: .05em solid rgb(92, 92, 92);
+    gap: .5em;
+    transform-origin: left;
+    overflow: hidden;
+    transition: transform linear .3s;
+}
+.Article:hover{
+    border: none;
+    box-shadow: -1px 5px 6px rgba(0,0,0, .8);
+    transform: scale(1.1);
+}
+.Article__img{ width: 7em }
+.Article__div{  width: 70% }
+.Article__span{ color: var(--secundary-color-text);  }
+.Article__h3{
+    margin-top: .5em;
+    overflow: hidden;
+    color: var(--primary-color-text);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.Preload{ margin-left: 1em }.Preload span{ color: var(--secundary-color-text) }
+
+
+/* -------------------------- @MEDIA -------------------------------- */
+
+@media screen and (max-width:1050px) {
+    .Section{ padding: 5em 5%; }
+    .Article__div{ width: 60% }
+}
+
+@media screen and (max-width:950px) {
+    .AboutMe__textContainer{ max-width: 350px }
+
+    .Section{ 
+        width: 100%;
+        padding: 1em;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr; 
+        justify-items: center;
+        row-gap: 4em;
+    }
+    .MoreInfo{ display: flex; flex-direction: column }
+    .MoreInfo__text{ text-align: justify }
+    .MoreInfo__button{ align-self: center }
+    
+    .Aside{ width: 90%; border: none; padding: 0 }
+    .Article{ transform-origin: center }
+    .Article__div{  width: 90% }
+    
+    .MoreInfo__title, .Aside__title{ text-align: center }
+}
+
+@media screen and (max-width:700px){
+    .AboutMe{ flex-direction: column; align-items: center; margin-bottom: 3em; }
+    .AboutMe__textContainer{ display: flex; flex-direction: column; align-items: center; }
+    .AboutMe__h3{ text-align: center }
+    .AboutMe__p{ text-align: justify }
+}
+
+@media screen and (max-width:680px){
+    
+
+    
+}
