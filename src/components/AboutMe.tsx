@@ -25,7 +25,7 @@ export default function AboutMe(){
             })
     }, [])
 
-    function Articles():any{
+    function Articles():JSX.Element | JSX.Element[]{
         if(articles === null) return( 
             <div>
                 <span>Cargando..</span>
@@ -35,7 +35,7 @@ export default function AboutMe(){
         return articles.map(article=>{
             const date = new Date(article.createdAt)
             return( 
-            <a href={`http://blog-app128.herokuapp.com/articles/${article._id}`} className={styles.Article} key={article._id}>
+            <a href={`https://blog-production-dfa3.up.railway.app/articles/${article._id}`} className={styles.Article} key={article._id}>
                 <img src={article.image} alt={article.alt} className={styles.Article__img} data-aos="fade-left" />
                 <div className={styles.Article__div}  data-aos="fade-left">
                     <span className={styles.Article__span}>{date.toLocaleDateString("es-ES",{year: "numeric", month: "long", day: "numeric"})}</span>
@@ -81,7 +81,7 @@ export default function AboutMe(){
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum modi nulla in odit nisi et voluptates harum, numquam aliquid eaque ut repudiandae. Quasi repudiandae, veniam neque
                     </p>
                     
-                    <a className={styles.MoreInfo__button} href="http://blog-app128.herokuapp.com">
+                    <a className={styles.MoreInfo__button} href="https://blog-production-dfa3.up.railway.app/">
                         ECHALE UN VISTAZO!
                     </a>
                 </div>
@@ -89,7 +89,7 @@ export default function AboutMe(){
                 <div className={styles.Aside}>
                     <div className={styles.Aside__articlesContainer}>
                         <h2 className={styles.Aside__title}>ULTIMOS POST</h2>
-                        <Articles />
+                        { Articles() }
                     </div>
                 </div>
             </div>

@@ -6,18 +6,18 @@ export interface ArticlesInterface{
     createdAt: string;
 }
 
-export interface technologies{
+export interface technologiesInterface{
     id: number
     name: string
     icon: JSX.Element
 }
 
-export interface projects{
+export interface projectsInterface{
     id: string
     title: string
     description: string
     image: string
     linkCode: string
     linkPage: string
-    technologies: technologies[]
+    technologies: technologiesInterface[]
 }

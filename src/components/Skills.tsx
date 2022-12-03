@@ -3,28 +3,30 @@ import { technologies, tools } from "../data/Technologies";
 
 //-------------- Styles
 import styles from "../styles/Skills.module.css"
-import 'aos/dist/aos.css'; 
 
+
+//-------------- Export Function
 export default function Skills(){
  
-    function Technologies():any{
-
-        return technologies.map(technology=>{
+    //-------------------- Technologies Box
+    function Technologies():JSX.Element[]{
+        return technologies.map((technology):JSX.Element =>{
             return  <div className={styles.Skills__icon} key={`${technology.id}`} title={technology.name} >
                         {technology.icon}
                     </div> 
         })
     }
 
-    function Tools():any{
-
-        return tools.map(tool=>{
+    //-------------------- Tools Box
+    function Tools():JSX.Element[]{
+        return tools.map((tool):JSX.Element =>{
             return  <div className={styles.Skills__icon} key={`${tool.id}`} title={tool.name} >
                         {tool.icon}
                     </div> 
         })
     }
 
+    //-------------------- Return
     return(
         <section className={styles.Skills}>
 
@@ -32,10 +34,10 @@ export default function Skills(){
             <h2 className={styles.Skills__h2}>HERRAMIENTAS</h2>
 
             <div className={styles.Skills__technologies} data-aos="zoom-out-up" data-aos-duration="800"> 
-                <Technologies />
+                { Technologies() }
             </div>
             <div className={styles.Skills__tools} data-aos="zoom-out-up" data-aos-duration="800">
-                <Tools/>
+                { Tools() }
             </div>
 
         </section>

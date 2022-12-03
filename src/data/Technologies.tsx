@@ -4,9 +4,12 @@ import { FaHtml5, FaCss3Alt, FaJsSquare,
      FaFigma, FaGitAlt  } from "react-icons/fa"
 import { SiCanva } from "react-icons/si"
 
+//-------------- Interface
+import { technologiesInterface } from "../interface"
+
 //-------------- Arrays
 
-const technologies = [
+const technologies:technologiesInterface[] = [
     {
         id:0,
         name:"Html",
@@ -39,7 +42,7 @@ const technologies = [
     }
 ]
 
-const tools = [
+const tools:technologiesInterface[] = [
     {
         id:0,
         name:"Git",
