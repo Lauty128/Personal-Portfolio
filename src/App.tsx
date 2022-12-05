@@ -3,6 +3,7 @@ import Header from './components/Header'
 import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import ContactMe from './components/ContactMe'
 
 //------------- Hooks
 
@@ -20,6 +21,7 @@ function App() {
       <AboutMe />
       <Skills />
       <Projects />
+      <ContactMe />
     </main>
   )
 }

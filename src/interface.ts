@@ -21,3 +21,10 @@ export interface projectsInterface{
     linkPage: string
     technologies: technologiesInterface[]
 }
+
+export interface formValuesInterface{
+    name:string;
+    email:string;
+    linkedin:string;
+    message:string;
+}

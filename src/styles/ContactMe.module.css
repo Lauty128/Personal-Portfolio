@@ -1,0 +1,37 @@
+.container{ padding: 3em 2em }
+
+.h2{  color: #FAEDBC; text-align: center; text-decoration: underline }
+
+.form{
+    margin: 2em auto 2em auto;
+    width: 70%;
+    display:flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: stretch;
+}
+
+.label{ display: block; color: rgb(187, 187, 187); margin-bottom: .2em }
+
+.input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.4em;
+    padding: .5em;
+    background-color: rgb(109, 109, 109);
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.textarea{ resize: none; height: 15em }
+
+.submit{
+    padding: .8em;
+    background-color: #FAEDBC;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: rgb(88, 88, 88);
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}

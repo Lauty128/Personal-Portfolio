@@ -81,12 +81,12 @@ const ProjectsData:projectsInterface[] = [
         ]
     },
     {
-        id:"bij1leawo0",
-        title:"Juego 'Piedra, Papel o Tijera'",
+        id:"7bd015rfa8",
+        title:"Juego 'Ta-te-ti'",
         description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse a culpa non incidunt sunt sapiente? Maxime tempore molestiae nemo et doloremque modi voluptate, beatae rerum ex illo, ducimus quasi alias adipisci id, recusandae dolor unde nisi. Consequuntur quidem beatae incidunt. Quas, reiciendis sapiente temporibus unde hic voluptates deleniti sit accusantium?",
-        image:"https://res.cloudinary.com/dyrpgj8od/image/upload/f_auto,q_auto/v1670075683/Portfolio/game_onshgx.png",
-        linkCode: "https://github.com/Lauty128/Game",
-        linkPage: "https://lauty128.github.io/Game/",
+        image:"https://res.cloudinary.com/dyrpgj8od/image/upload/f_auto,q_auto/v1670075683/Portfolio/ta-te-ti_game_ut67e4.png",
+        linkCode: "https://github.com/Lauty128/TicTacToe-Game",
+        linkPage: "https://lauty128.github.io/TicTacToe-Game/",
         technologies: [
             {
                 id: 0,
@@ -131,12 +131,12 @@ const ProjectsData:projectsInterface[] = [
         ]
     },
     {
-        id:"7bd015rfa8",
-        title:"Juego 'Ta-te-ti'",
+        id:"bij1leawo0",
+        title:"Juego 'Piedra, Papel o Tijera'",
         description:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse a culpa non incidunt sunt sapiente? Maxime tempore molestiae nemo et doloremque modi voluptate, beatae rerum ex illo, ducimus quasi alias adipisci id, recusandae dolor unde nisi. Consequuntur quidem beatae incidunt. Quas, reiciendis sapiente temporibus unde hic voluptates deleniti sit accusantium?",
-        image:"https://res.cloudinary.com/dyrpgj8od/image/upload/f_auto,q_auto/v1670075683/Portfolio/ta-te-ti_game_ut67e4.png",
-        linkCode: "https://github.com/Lauty128/TicTacToe-Game",
-        linkPage: "https://lauty128.github.io/TicTacToe-Game/",
+        image:"https://res.cloudinary.com/dyrpgj8od/image/upload/f_auto,q_auto/v1670075683/Portfolio/game_onshgx.png",
+        linkCode: "https://github.com/Lauty128/Game",
+        linkPage: "https://lauty128.github.io/Game/",
         technologies: [
             {
                 id: 0,

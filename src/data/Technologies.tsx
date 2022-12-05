@@ -1,15 +1,15 @@
 //-------------- Icons
 import { FaHtml5, FaCss3Alt, FaJsSquare, 
     FaNodeJs, FaReact, FaSass,
-     FaFigma, FaGitAlt  } from "react-icons/fa"
-import { SiCanva } from "react-icons/si"
+    FaFigma, FaGitAlt, FaNpm,
+    FaBuffer  } from "react-icons/fa"
+import { SiCanva, SiJquery, SiVisualstudiocode } from "react-icons/si"
 
 //-------------- Interface
 import { technologiesInterface } from "../interface"
 
-//-------------- Arrays
-
-const technologies:technologiesInterface[] = [
+//------------------------------------------------
+const languages:technologiesInterface[] = [
     {
         id:0,
         name:"Html",
@@ -22,31 +22,16 @@ const technologies:technologiesInterface[] = [
     },
     {
         id:2,
-        name:"Sass",
-        icon: <FaSass />
-    },
-    {
-        id:3,
         name:"JavaScript",
         icon: <FaJsSquare />
-    },
-    {
-        id:4,
-        name:"ReactJS",
-        icon: <FaReact />
-    },
-    {
-        id:5,
-        name:"NodeJS",
-        icon: <FaNodeJs />
     }
 ]
 
 const tools:technologiesInterface[] = [
     {
         id:0,
-        name:"Git",
-        icon: <FaGitAlt />
+        name:"Recursos Web",
+        icon: <FaBuffer />
     },
     {
         id:1,
@@ -60,11 +45,55 @@ const tools:technologiesInterface[] = [
     }
 ]
 
+const frameworks:technologiesInterface[] = [
+    {
+        id:0,
+        name:"NodeJS",
+        icon: <FaNodeJs />
+    },
+    {
+        id:1,
+        name:"ReactJS",
+        icon: <FaReact />
+    },
+    {
+        id:2,
+        name:"Sass",
+        icon: <FaSass />
+    },
+    {
+        id:3,
+        name:"Jquery",
+        icon:<SiJquery />
+    }
+
+]
+
+const technologies:technologiesInterface[] = [
+    {
+        id:0,
+        name:"Npm",
+        icon: <FaNpm />
+    },
+    {
+        id:1,
+        name:"VsCode",
+        icon:<SiVisualstudiocode />
+    },
+    {
+        id:2,
+        name:"Git",
+        icon: <FaGitAlt />
+    }
+]
+
 
 
 export {
-    technologies,
-    tools
+    languages,
+    tools,
+    frameworks,
+    technologies
 }
 
 
