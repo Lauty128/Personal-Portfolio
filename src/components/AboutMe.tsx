@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react"
 
 //-------------- Assets
-import { FaArrowDown } from "react-icons/fa"
+import { FaFileAlt } from "react-icons/fa"
 import image from "../assets/retrato-vertical.jpg"
 
 //-------------- Styles
@@ -26,11 +26,18 @@ export default function AboutMe(){
     }, [])
 
     function Articles():JSX.Element | JSX.Element[]{
-        if(articles === null) return( 
-            <div>
-                <span>Cargando..</span>
-            </div> 
-        )
+        if(articles === null){
+            const repeat = [0,1,2]
+            return repeat.map((element)=>{
+                return <div className={styles.ArticlePreload} key={element}>
+                            <div className={styles.ArticlePreload__img}></div>
+                            <div className={styles.ArticlePreload__div}>
+                                <div className={styles.ArticlePreload__text}></div>
+                                <div className={styles.ArticlePreload__title}></div>
+                            </div>
+                        </div> 
+            })
+    }
 
         return articles.map(article=>{
             const date = new Date(article.createdAt)
@@ -58,18 +65,15 @@ export default function AboutMe(){
                 <div className={styles.AboutMe__textContainer}>
                     <h3 className={styles.AboutMe__h3}>SOBRE MI</h3>
                     <p className={styles.AboutMe__p}>
-                        Mis habilidades se centran esencialmente en HTML, CSS y Javascript. También cuento 
-                        con conocimientos en Git para trabajar en equipo y algunas herramientas de diseño 
-                        como Figma y Canvas.
-                        <br />
-                        Cuento con una gran capacidad de aprendizaje, trabajo en equipo y buena adaptación 
-                        al grupo. Tengo varias cualidades para aportar.
+                    Hola, mi nombre es Lautaro, tengo 19 años y estoy en busca de mi primer trabajo como desarrollador web. <br />
+                    Comencé en este mundo de la programación de manera autodidacta, obteniendo información y aprovechando cualquier oportunidad para poder aprender algo nuevo.
+                    Tengo muchas ganas de poder comenzar mi carrera profesional, obtener experiencia y aprender mucho mas
                     </p>
-                    <a id="buttonProjects" href="#sectionProjects" className={styles.AboutMe__button}>
-                        <div className={styles.AboutMe__effectButton}>
-                        </div>
-                        <h4 className={styles.AboutMe__h4}>PROYECTOS</h4>
-                        <FaArrowDown />
+                    <a id="buttonProjects" href="https://drive.google.com/file/d/1eZ0bRhxprRA8S1WOwx1_GFeMCy6NOL4J/view?usp=sharing" 
+                    className={styles.AboutMe__button}>
+                        <div className={styles.AboutMe__effectButton}></div>
+                        <FaFileAlt />
+                        <h4 className={styles.AboutMe__h4}>DESCARGAR CV</h4>
                     </a>
                 </div>
             </div>
@@ -77,8 +81,10 @@ export default function AboutMe(){
             <div className={styles.Section}>
                 <div className={styles.MoreInfo}>
                     <h2 className={styles.MoreInfo__title}>MAS INFORMACION</h2>
-                    <p className={styles.MoreInfo__text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum modi nulla in odit nisi et voluptates harum, numquam aliquid eaque ut repudiandae. Quasi repudiandae, veniam neque delectus at aliquid facilis nulla aspernatur veritatis doloribus, repellendus eaque, quas doloremque qui! Accusantium commodi sequi quam eligendi eius labore! Praesentium iusto molestias officiis error pariatur eius odit adipisci quis eveniet temporibus quos harum deserunt dolores quisquam distinctio labore nulla cum, ea eligendi recusandae? Quas eos delectus animi dolor ratione porro, similique distinctio? <br /> <br />
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatum modi nulla in odit nisi et voluptates harum, numquam aliquid eaque ut repudiandae. Quasi repudiandae, veniam neque
+                    <p className={styles.MoreInfo__text}>Como dije anteriormente, ingrese en el mundo de la programación de manera totalmente autodidacta, aprendiendo de videos, foros y muchos errores 😁.  <br />
+                    Primero realice algunos proyectos con HTML, CSS y JavaScript puro hasta poder dominarlos bastante bien, luego comenzó a llamarme la atención NodeJS  y comencé a trabajar con el, junto a ExpressJS, con el fin de crear mi propio servidor.
+                    En el 2022 me di cuenta de que me interesaba mas el lado del front-end, por lo que comencé con React, con el cual sigo aprendiendo e informándome de cosas nuevas. Justo este proyecto esta realizado con React y TypeScript, utilizando Vite para crear el proyecto ya configurado.  <br />
+                    Si quieres saber mas sobre mi puedes entrar a mi blog y ver el contenido que subo. Es un proyecto al cual le dedico bastante tiempo y que dia a dia trabajo para poder mejorarlo.
                     </p>
                     
                     <a className={styles.MoreInfo__button} href="https://blog-production-dfa3.up.railway.app/">

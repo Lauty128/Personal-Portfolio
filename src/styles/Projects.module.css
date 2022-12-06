@@ -72,7 +72,7 @@
 }
 
 @media screen and (max-width:750px) {
-    .Projects{ padding: 0 .4em 10em }
+    .Projects{ padding: 0 .4em 3em }
     .Project__title{ font-size: 1.1em }
     .Project__description{ font-size: .95em; margin-bottom: 1em }
     .Project__imgContainer{ width: 22em; height: 15em }

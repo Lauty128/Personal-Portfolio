@@ -33,3 +33,6 @@ img{ object-fit: cover }
  
 ul{ padding: 0 }
 li{ list-style: none }
+
+//--------------------- Events
+.Menu--active{ backdrop-filter: blur(10px); background-color: rgba(48, 47, 47, 0.384) }

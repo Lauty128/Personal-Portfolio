@@ -35,3 +35,12 @@
     font-size: 1.2em;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
+
+@media screen and (max-width:800px){
+    .form{ width: 90% }
+}
+
+@media screen and (max-width:510px){
+    .container{ padding: 3em 1em }
+    .form{ width: 100% }
+}

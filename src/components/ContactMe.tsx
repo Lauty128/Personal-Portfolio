@@ -41,32 +41,33 @@ export default function ContactMe(){
 
         <form action="" className={styles.form} onSubmit={submitForm} ref={form}>
 
-            <div className={styles.inputContainer}>
+            <div className={styles.inputContainer} data-aos="fade-left" data-aos-duration="800" >
                 <label htmlFor="inputName" className={styles.label}>*Nombre</label>
                 <input type="text" name="name" id="inputName" onChange={changeValue} 
                 value={values.name} className={styles.input} />
             </div>
 
-            <div className={styles.inputContainer}>
+            <div className={styles.inputContainer} data-aos="fade-left" data-aos-duration="800" >
                 <label htmlFor="inputName" className={styles.label}>*Correo Electronico</label>
                 <input type="text" name="email" id="inputName" onChange={changeValue} 
                 value={values.email} className={styles.input} />
             </div>
 
-            <div className={styles.inputContainer}>
+            <div className={styles.inputContainer} data-aos="fade-left" data-aos-duration="800" >
                 <label htmlFor="inputName" className={styles.label}>Linkedin</label>
                 <input type="text" name="linkedin" id="inputName" onChange={changeValue} 
                 value={values.linkedin} className={styles.input} />
             </div>
             
-            <div className={styles.inputContainer}>
+            <div className={styles.inputContainer} data-aos="fade-left" data-aos-duration="800" >
                 <label htmlFor="inputMessage" className={styles.label}>*Mensaje</label>
                 <textarea name="message" id="inputMessage" onChange={changeValue} 
                 value={values.message} className={`${styles.input} ${styles.textarea}`}>
                 </textarea>
             </div>
 
-            <input type="submit" value="ENVIAR" className={styles.submit} />
+            <input type="submit" value="ENVIAR" className={styles.submit} 
+            data-aos="zoom-out" data-aos-duration="700"/>
 
         </form>
 

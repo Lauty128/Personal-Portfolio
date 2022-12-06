@@ -33,17 +33,17 @@
 }
 .AboutMe__effectButton{   
     position: absolute;
-    right: -22px;
+    left: -10px;
     top: 0;
-    width: 3em;
+    width: 4em;
     height: 3em;
     background-color: #FAEDBC;
-    transform-origin: right;
+    transform-origin: left;
     transform: skewX(40deg);
     transition: transform linear .3s;
 }
 .AboutMe__button:hover .AboutMe__effectButton{ transform: scaleX(4); }
-.AboutMe__h4{ margin-right: .5em; z-index: 10 }
+.AboutMe__h4{ margin-left: .5em; z-index: 10 }
 .AboutMe__button svg{ margin: 0; z-index: 10 }
 
 /*--------------------------------- SECTION 2 -------------------------------*/
@@ -101,8 +101,31 @@
     text-overflow: ellipsis;
 }
 
-.Preload{ margin-left: 1em }.Preload span{ color: var(--secundary-color-text) }
+.ArticlePreload{ 
+    display: grid;
+    gap: .5em;
+    grid-template-columns: 30% calc(70% - 1em);
+    height: 5em;
+    max-width: 100%;
+    margin-top: 1.5em;
+    animation-name: preload;
+    animation-timing-function: ease-out;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.ArticlePreload__img, .ArticlePreload__text, .ArticlePreload__title{ background-color: #979797cc }
+.ArticlePreload__img{ width: 100%; height: 100% }
+.ArticlePreload__div{ display: flex; flex-direction: column; gap: .5em; justify-content: flex-end; }
+.ArticlePreload__text{ width: 80%; height: 1em; }
+.ArticlePreload__title{ width: 100%; height: 1.8em; }
 
+@keyframes preload{
+    0%{ opacity: 1; }
+    25%{ opacity: .05 }
+    50%{ opacity: 1 }
+    75%{ opacity: .05 }
+    100%{ opacity: 1 }
+}
 
 /* -------------------------- @MEDIA -------------------------------- */
 

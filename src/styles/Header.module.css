@@ -13,11 +13,16 @@ header{
 
 .Menu{
     width: 100%;
-    margin-top: 1em;
+    height: 3.5em;
+    padding: 1em 0;
     display: flex;
     justify-content:center;
+    align-items: center;
     gap: 2em;
     color: #E0E0E0;
+    position: fixed;
+    z-index: 10;
+    transition: background-color linear .5s, backdrop-filter linear .5s;
 }
 .Menu__h3:hover{ color: #fff; cursor: pointer; border-bottom: .1em solid #fff; }
 .Menu__h3 a{ color:#E0E0E0; text-decoration: none; }
@@ -33,6 +38,7 @@ header{
     justify-content: center;
     width: 100%;
     height: 100%;
+    z-index: 5;
 }
 .h1{ margin: 0; color: #FAEDBC; font-size: 3em; line-height: 80% }
 .h3{ margin-bottom: 1em; color: #E0E0E0; font-weight: 300 }
@@ -49,3 +55,9 @@ header{
 }
 .Networks__icon:hover{ color: #fff }
 .Networks__icon svg{ vertical-align: text-top; }
+
+@media screen and (max-width:500px) {
+    .Menu__h3{ font-size: .9em }
+    .h1{ font-size: 2.5em }
+    .Networks__icon{ font-size:1.3em }
+}

@@ -4,6 +4,7 @@ import AboutMe from './components/AboutMe'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import ContactMe from './components/ContactMe'
+import Footer from './components/Footer'
 
 //------------- Hooks
 
@@ -16,13 +17,17 @@ function App() {
   AOS.init({ once: true })
 
   return (
-    <main>
-      <Header />
-      <AboutMe />
-      <Skills />
-      <Projects />
-      <ContactMe />
-    </main>
+    <>
+      <main>
+        <Header />
+        <AboutMe />
+        <Skills />
+        <Projects />
+        <ContactMe />
+      </main>
+      
+      <Footer />
+    </>
   )
 }
 

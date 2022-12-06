@@ -31,7 +31,9 @@ export default function Projects(){
 
                     <div className={styles.Project__textContainer}>
                         <h3 className={styles.Project__title}>{project.title}</h3>
-                        <p className={styles.Project__description}>{project.description}</p>
+                        <p className={styles.Project__description}>
+                            {`${project.description}`}
+                        </p>
                         <button className={styles.Project__button}> 
                         <a href={project.linkCode}><FaCode /> Codigo</a> 
                         </button>

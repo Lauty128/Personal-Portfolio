@@ -1,16 +1,29 @@
+//-------------- Styles
 import styles from "../styles/Header.module.css"
 
+//-------------- Icons
 import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa"
+
 
 export default function Header(){
 
+    document.addEventListener("scroll",()=>{
+        const menuDiv:any = document.getElementById("Menu")
+        
+        if(window.scrollY > 600){ 
+            menuDiv.classList.add("Menu--active")
+        }else if(menuDiv.classList.contains("Menu--active")){
+            menuDiv.classList.remove("Menu--active")
+        }
+    })
 
     return (
-        <header>
-            <nav className={styles.Menu}>
-                <h3 id="home" className={styles.Menu__h3}><a href="">INICIO</a></h3>
-                <h3 id="aboutMe" className={styles.Menu__h3}><a href="#AboutMe">SOBRE MI</a></h3>
-                <h3 id="projects" className={styles.Menu__h3}><a href="#Projects">PROYECTOS</a></h3>
+        <header id="Home">
+            <nav className={styles.Menu} id="Menu">
+                <h3 className={styles.Menu__h3}><a href="#Home">INICIO</a></h3>
+                <h3 className={styles.Menu__h3}><a href="#AboutMe">SOBRE MI</a></h3>
+                <h3 className={styles.Menu__h3}><a href="#Projects">PROYECTOS</a></h3>
+                <h3 className={styles.Menu__h3}><a href="#ContactMe">CONTACTAME</a></h3>
             </nav>
             <div className={styles.textContainer}>
                 <h1 className={styles.h1}>LAUTARO SILVERII</h1>

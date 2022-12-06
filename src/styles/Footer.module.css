@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    padding: 1.5em 1em;
+    background-color: rgb(68, 68, 68);
+}
+
+.h4{
+    font-size: 1.6em;
+    color: rgb(201, 201, 201);
+}
+
+.network{
+    display: block;
+    margin-top: .7em;
+    font-size: 1.3em;
+    color: rgb(138, 138, 138);
+    text-align: center;
+}
+.network svg{ vertical-align: text-top;  }
+.network:hover{ color: rgb(201, 201, 201); }
+
+.span{
+    text-decoration: underline;
+    font-size: 1.5em;
+    color: rgb(201, 201, 201);
+}
+
+
+@media screen and (max-width:600px) {
+    .container{ justify-content: flex-start; flex-direction: column; gap: 4em }
+    .network{ text-align: left; }
+}
