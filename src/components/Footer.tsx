@@ -9,19 +9,18 @@ export default function Footer(){
 
     return(
         <footer className={styles.container}>
-            <h4 className={styles.h4}>©LAUTARO SILVERII</h4>
+            <h4 className={styles.h4}>LAUTARO SILVERII</h4>
+
             <div className={styles.networks}>
-                <span className={styles.span}>Redes sociales</span>
                 <a href="https://github.com/Lauty128" className={styles.network}>
-                    <FaGithub /> Github
-                </a>
-                <a href="https://www.facebook.com/lautaro.silverii.5" className={styles.network}>
-                    <FaFacebook /> Facebook
+                    <FaGithub />
                 </a>
                 <a href="https://www.linkedin.com/in/lautaro-silverii-8a5750209/" className={styles.network}>
-                    <FaLinkedin /> Linkedin
+                    <FaLinkedin />
                 </a>
             </div>
+
+            <p className={styles.p}>©Copyright | 💻 With ReactJS</p> 
         </footer>
     )
 }

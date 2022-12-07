@@ -67,21 +67,26 @@
 
 
 /*-------------------------- @Media ------------------------------*/
-@media screen and (max-width:850px) {
+@media screen and (max-width:1050px) {
     .Project{ width: 100% }
 }
 
-@media screen and (max-width:750px) {
-    .Projects{ padding: 0 .4em 3em }
-    .Project__title{ font-size: 1.1em }
-    .Project__description{ font-size: .95em; margin-bottom: 1em }
-    .Project__imgContainer{ width: 22em; height: 15em }
-}
-
-@media screen and (max-width:550px) {
+@media screen and (max-width:800px) {
     .Project{
+        width: 80%;
         flex-direction: column; 
         align-items: center;
         text-align: center
     }
+}
+
+@media screen and (max-width:750px) {
+    .Projects{ padding: 0 .4em 3em }
+    .Project__title{ font-size: 1.2em }
+    .Project__description{ margin-bottom: 1em }
+    .Project__imgContainer{ width: 22em; height: 15em }
+}
+
+@media screen and (max-width:550px) {
+    .Project{ width: 100%; }
 }

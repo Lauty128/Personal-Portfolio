@@ -1,22 +1,21 @@
 .container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 20%;
-    padding: 1.5em 1em;
+    padding: 1em 1em 0 1em;
     background-color: rgb(68, 68, 68);
 }
 
-.h4{
-    font-size: 1.6em;
-    color: rgb(201, 201, 201);
-}
+.h4{ font-size: 1.6em; color: rgb(201, 201, 201); margin-bottom: .5em; }
 
 .network{
-    display: block;
     margin-top: .7em;
     font-size: 1.3em;
     color: rgb(138, 138, 138);
     text-align: center;
+    padding: .3em .6em;
 }
 .network svg{ vertical-align: text-top;  }
 .network:hover{ color: rgb(201, 201, 201); }
@@ -27,8 +26,4 @@
     color: rgb(201, 201, 201);
 }
 
-
-@media screen and (max-width:600px) {
-    .container{ justify-content: flex-start; flex-direction: column; gap: 4em }
-    .network{ text-align: left; }
-}
+.p{ margin: .5em 0; color: rgb(201, 201, 201) }
