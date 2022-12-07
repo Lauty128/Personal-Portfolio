@@ -11,22 +11,74 @@ header{
     overflow: hidden;
 }
 
+/*----------------------- MENU ---------------------------------*/
 .Menu{
     width: 100%;
-    height: 3.5em;
-    padding: 1em 0;
+    height: fit-content;
+    padding: 0 1em;
     display: flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items: center;
-    gap: 2em;
+    flex-wrap: wrap;
     color: #E0E0E0;
+    background-color: #545454;
     position: fixed;
     z-index: 10;
-    transition: background-color linear .5s, backdrop-filter linear .5s;
 }
-.Menu__h3:hover{ color: #fff; cursor: pointer; border-bottom: .1em solid #fff; }
-.Menu__h3 a{ color:#E0E0E0; text-decoration: none; }
+/* --------------- IMG   */
+.img{ width: 5em }
 
+/* --------------- LINKS   */
+.links{ display: flex; gap: 2em }
+.Menu__h3{ position: relative; overflow: hidden; line-height: 130% }
+.Menu__h3::after{
+    content: "";
+    position: absolute;
+    width: 115%;
+    height: .1em;
+    background-color: #FAEDBC;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform ease-in .2s;
+}
+.Menu__h3 a{ color:#E0E0E0; text-decoration: none; user-select: none; }
+.Menu__main a{ color: #FAEDBC }
+
+.Menu__h3:hover::after{ transform: translateX(-50%)  }
+
+/* --------------- BUTTON   */
+.Button{
+    width: 2.5em;
+    height: 2em;
+    cursor: pointer;
+    display: none;
+}
+
+.Button span{
+    display: block;
+    width: 100%;
+    height: .3em;
+    background-color: #FAEDBC;
+    pointer-events: none;
+    transform-origin: left;
+    transition: transform .2s linear, opacity .2s linear;
+}
+
+.buttonDiv2, .buttonDiv3{ margin-top: .5em }
+
+.Button--active .buttonDiv1{
+    transform: rotate(40deg);
+}
+.Button--active .buttonDiv2{
+    transform: translateX(-2em);
+    opacity: 0;
+
+}
+.Button--active .buttonDiv3{
+    transform: rotate(-40deg);
+}
+/* ----------------------------- TEXT -----------------------------*/
 .textContainer{
     position: absolute;
     left: 50%;
@@ -42,22 +94,40 @@ header{
 }
 .h1{ margin: 0; color: #FAEDBC; font-size: 3em; line-height: 80% }
 .h3{ margin-bottom: 1em; color: #E0E0E0; font-weight: 300 }
+
+/*----------------------- NETWORKS     */
 .Networks{ margin-top: .5em }
 .Networks__icon{
-    border: #FAEDBC 2px solid;  
+    border: #FAEDBC 2px solid;
     border-radius: 50%;
     position: relative;
-    color: #c2c2c2; 
+    color: #c2c2c2;
     font-size: 1.5em;
     padding: .4em;
     margin: 0 .4em;
-    cursor: pointer;  
+    cursor: pointer;
 }
 .Networks__icon:hover{ color: #fff }
 .Networks__icon svg{ vertical-align: text-top; }
 
+
+/* ----------------------------- @MEDIA -----------------------------*/
+
+@media screen and (max-width:700px) {
+    .Button{ display: block }
+    .links{
+        margin-top: -100%;
+        width: 100%;
+        flex-direction: column;
+        padding: 1em 0;
+    }
+    .Menu__h3::after{ width: 100%; left: 0; transform-origin: left; transform: scaleX(0); }
+    .Menu__h3:hover::after{ transform: scaleX(1)  }
+
+    .links--active{ margin-top: 0 }
+}
+
 @media screen and (max-width:500px) {
-    .Menu__h3{ font-size: .9em }
     .h1{ font-size: 2.5em }
     .Networks__icon{ font-size:1.3em }
 }

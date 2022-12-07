@@ -1,30 +1,53 @@
 //-------------- Styles
 import styles from "../styles/Header.module.css"
 
-//-------------- Icons
+//-------------- Assets
+import logo from '../assets/logo-mini.png'
 import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa"
 
 
 export default function Header(){
 
-    document.addEventListener("scroll",()=>{
-        const menuDiv:any = document.getElementById("Menu")
-        
-        if(window.scrollY > 600){ 
-            menuDiv.classList.add("Menu--active")
-        }else if(menuDiv.classList.contains("Menu--active")){
-            menuDiv.classList.remove("Menu--active")
+    const toggleButton = (e:any)=>{
+        if(window.innerWidth > 700) return;
+
+        let target = e.target
+        if(target.parentNode.classList.contains(`${styles.Menu__h3}`)){
+            target = target.parentElement
+                        .parentElement.previousElementSibling;
         }
-    })
+
+        target.classList.toggle(`${styles["Button--active"]}`)
+        target.nextElementSibling.classList.toggle(`${styles["links--active"]}`)
+    }
 
     return (
         <header id="Home">
             <nav className={styles.Menu} id="Menu">
-                <h3 className={styles.Menu__h3}><a href="#Home">INICIO</a></h3>
-                <h3 className={styles.Menu__h3}><a href="#AboutMe">SOBRE MI</a></h3>
-                <h3 className={styles.Menu__h3}><a href="#Projects">PROYECTOS</a></h3>
-                <h3 className={styles.Menu__h3}><a href="#ContactMe">CONTACTAME</a></h3>
+                <img src={logo} alt="logo portafolio" className={styles.img} />
+
+                <div className={`${styles.Button}`} onClick={toggleButton}>
+                    <span className={styles.buttonDiv1}></span>
+                    <span className={styles.buttonDiv2}></span>
+                    <span className={styles.buttonDiv3}></span>
+                </div>
+
+                <div className={styles.links}>
+                    <h3 className={`${styles.Menu__h3} ${styles.Menu__main}`}>
+                        <a onClick={toggleButton} href="#Home">INICIO</a>
+                    </h3>
+                    <h3 className={styles.Menu__h3}>
+                        <a onClick={toggleButton} href="#AboutMe">SOBRE MI</a>
+                    </h3>
+                    <h3 className={styles.Menu__h3}>
+                        <a onClick={toggleButton} href="#Projects">PROYECTOS</a>
+                    </h3>
+                    <h3 className={styles.Menu__h3}>
+                        <a onClick={toggleButton} href="#ContactMe">CONTACTAME</a>
+                    </h3>
+                </div>
             </nav>
+
             <div className={styles.textContainer}>
                 <h1 className={styles.h1}>LAUTARO SILVERII</h1>
                 <h3 className={styles.h3}>DESARROLLADOR WEB</h3>
