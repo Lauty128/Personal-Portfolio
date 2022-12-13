@@ -15,7 +15,7 @@ const ProjectsData:projectsInterface[] = [
         El resto es un poco de información sobre el blog y los artículos del mismo, cuenta con algunas animaciones y está adaptado para dispositivos móviles`,
         image:"https://res.cloudinary.com/dyrpgj8od/image/upload/f_auto,q_auto/v1670001133/Portfolio/blogImg_if9iew.png",
         linkCode: "https://github.com/Lauty128/Blog",
-        linkPage: "https://blog-production-dfa3.up.railway.app/",
+        linkPage: "https://silveriiblog.up.railway.app/",
         technologies: [
             {
                 id: 0,

@@ -24,6 +24,7 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 .textarea{ resize: none; height: 15em }
+.inputError{ color:  rgb(146, 25, 25) }
 
 .submit{
     padding: .8em;
@@ -34,6 +35,39 @@
     color: rgb(88, 88, 88);
     font-size: 1.2em;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+.submitBlock{
+    pointer-events:none;
+    animation: submitForm 1.2s infinite ease-in-out;
+}
+@keyframes submitForm{
+    0%  { opacity: 1 }
+    50% { opacity: 0 }
+    100%{ opacity: 1 }
+}
+
+.formError{ animation: tiembla .1s infinite }
+
+@keyframes tiembla{
+    0%  { transform:rotateZ(-.5deg); }
+    50% { transform:rotateZ( 0deg) scale(.98); }
+    100%{ transform:rotateZ( .5deg); }
+}
+
+/*-------------------------- Message Box*/
+.message{
+    background-color: rgb(39, 100, 37);
+    width: 20em;
+    padding: 1em;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    transform: translateX(25em);
+    transition: transform ease-in .3s;
+}
+.message--active{ transform: translateX(0); }
+.messageError{
+    background-color: rgb(104, 39, 39);
 }
 
 @media screen and (max-width:800px){

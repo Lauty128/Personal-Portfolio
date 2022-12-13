@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 
 //-------------- Assets
 import { FaFileAlt } from "react-icons/fa"
-import image from "../assets/retrato-vertical.jpg"
+import image from "../assets/retrato.jpg"
 
 //-------------- Styles
 import styles from "../styles/AboutMe.module.css"
@@ -17,7 +17,7 @@ export default function AboutMe(){
     //Array<interface.Articles> * This is valid *
 
     useEffect(()=>{
-        fetch("https://blog-production-dfa3.up.railway.app/api/all", {mode:"cors"})
+        fetch("https://silveriiblog.up.railway.app/api/all", {mode:"cors"})
             .then(response => response.json())
             .then(data=>{
                 const articles = data.slice(0,3)
@@ -42,7 +42,7 @@ export default function AboutMe(){
         return articles.map(article=>{
             const date = new Date(article.createdAt)
             return( 
-            <a href={`https://blog-production-dfa3.up.railway.app/articles/${article._id}`} className={styles.Article} key={article._id}>
+            <a href={`https://silveriiblog.up.railway.app/articles/${article._id}`} className={styles.Article} key={article._id}>
                 <img src={article.image} alt={article.alt} className={styles.Article__img} data-aos="fade-left" />
                 <div className={styles.Article__div}  data-aos="fade-left">
                     <span className={styles.Article__span}>{date.toLocaleDateString("es-ES",{year: "numeric", month: "long", day: "numeric"})}</span>
@@ -87,7 +87,7 @@ export default function AboutMe(){
                     Si quieres saber mas sobre mi puedes entrar a mi blog y ver el contenido que subo. Es un proyecto al cual le dedico bastante tiempo y que dia a dia trabajo para poder mejorarlo.
                     </p>
                     
-                    <a className={styles.MoreInfo__button} href="https://blog-production-dfa3.up.railway.app/">
+                    <a className={styles.MoreInfo__button} href="https://silveriiblog.up.railway.app">
                         ECHALE UN VISTAZO!
                     </a>
                 </div>

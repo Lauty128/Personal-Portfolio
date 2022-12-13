@@ -10,10 +10,9 @@ import styles from "../styles/Projects.module.css"
 
 export default function Projects(){
 
+    //-------------------- Project Cards
     function ProjectsCard():JSX.Element | JSX.Element[]{
-
         return ProjectsData.map(project=>{
-
             return(  
                 <div className={styles.Project} key={project.id} data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                     <div className={styles.Project__imgContainer}>
@@ -21,29 +20,32 @@ export default function Projects(){
                         <div className={styles.technologies}>
                             {
                             project.technologies.map(technology=>{
-                                return <div key={`${technology.id}`} className={styles.technology} title={technology.name}>
+                                return (  
+                                <div key={`${technology.id}`} className={styles.technology} title=      {technology.name}>
                                     {technology.icon}
-                                    </div>
-                                })
+                                </div>
+                                )})
                             }
                         </div>
                     </div>
 
                     <div className={styles.Project__textContainer}>
                         <h3 className={styles.Project__title}>{project.title}</h3>
+
                         <p className={styles.Project__description}>
                             {`${project.description}`}
                         </p>
+
                         <button className={styles.Project__button}> 
-                        <a href={project.linkCode}><FaCode /> Codigo</a> 
+                            <a href={project.linkCode}><FaCode /> Codigo</a> 
                         </button>
+
                         <button className={styles.Project__button}> 
-                        <a href={project.linkPage}><FaEye /> Pagina</a>
+                            <a href={project.linkPage}><FaEye /> Pagina</a>
                         </button>
                     </div>
                 </div>
             )
-        
         })
 
     }

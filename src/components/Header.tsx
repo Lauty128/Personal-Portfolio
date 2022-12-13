@@ -1,28 +1,32 @@
 //-------------- Styles
 import styles from "../styles/Header.module.css"
 
-//-------------- Assets
+//-------------- Images and Icons
 import logo from '../assets/logo-mini.png'
 import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa"
 
 
 export default function Header(){
 
+    //-------------------- Menu Button
     const toggleButton = (e:any)=>{
         if(window.innerWidth > 700) return;
 
         let target = e.target
         if(target.parentNode.classList.contains(`${styles.Menu__h3}`)){
+            // If <e.target == "h3"> then the value of the "target" constant is changed.To reuse the function
             target = target.parentElement
-                        .parentElement.previousElementSibling;
+                    .parentElement.previousElementSibling;
         }
 
         target.classList.toggle(`${styles["Button--active"]}`)
         target.nextElementSibling.classList.toggle(`${styles["links--active"]}`)
     }
 
+    //-------------------- Return
     return (
         <header id="Home">
+            
             <nav className={styles.Menu} id="Menu">
                 <img src={logo} alt="logo portafolio" className={styles.img} />
 
@@ -50,7 +54,9 @@ export default function Header(){
 
             <div className={styles.textContainer}>
                 <h1 className={styles.h1}>LAUTARO SILVERII</h1>
+
                 <h3 className={styles.h3}>DESARROLLADOR WEB</h3>
+
                 <div className={styles.Networks}>
                     <a className={styles.Networks__icon} href="https://www.facebook.com/lautaro.silverii.5"> 
                         <FaFacebookF/> 
@@ -63,6 +69,7 @@ export default function Header(){
                     </a>
                 </div>
             </div>
+
         </header>
     )
 }

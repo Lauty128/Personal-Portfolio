@@ -8,7 +8,6 @@ import { technologiesInterface } from "../interface";
 import styles from "../styles/Skills.module.css"
 
 
-//-------------- Export Function
 export default function Skills(){
  
     //-------------------- Load Icons
@@ -28,14 +27,17 @@ export default function Skills(){
                 <h2 className={styles.h2}>LENGUAJES</h2>
                 { Technologies(languages) }
             </div>
+
             <div className={styles.container} data-aos="zoom-out-up" data-aos-duration="600">
                 <h2 className={styles.h2}>HERRAMIENTAS</h2>
                 { Technologies(tools) }
             </div>
+
             <div className={styles.container} data-aos="zoom-out-up" data-aos-duration="600">
                 <h2 className={`${styles.h2} ${styles.frameworkTitle}`}>FRAMEWORKS & LIBRERIAS</h2>
                 { Technologies(frameworks) }
             </div>
+            
             <div className={styles.container} data-aos="zoom-out-up" data-aos-duration="600"> 
                 <h2 className={styles.h2}>TECNOLOGIAS</h2>
                 { Technologies(technologies) }
